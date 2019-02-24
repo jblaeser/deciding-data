@@ -27,12 +27,30 @@ var churchillSpeech = {
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
-  var favoriteAuthor = window.prompt("Which author is your favorite?");
+  var favoriteAuthor = window.prompt("Which author is your favorite?").toUpperCase();
 
+  switch (favoriteAuthor) {
+    case "CHURCHILL" :
+      console.log(churchillSpeech.author + " was " + churchillSpeech.authorAge + " during this speech.");
+      break;
+
+    case "GHANDI" :
+      console.log(ghandiSpeech.author + " was " + ghandiSpeech.authorAge + " during this speech.");
+      break;
+
+    case "DEMOSTHENES" :
+      console.log(demosthenesSpeech.author + " was " + demosthenesSpeech.authorAge + " during this speech.");
+      break;
+
+    default :
+      console.log("I'm sure that's a great author, but we're not here to talk about them.");
+      break;
+  };
 });
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
+  console.log("This speech was written by " + churchillSpeech.author + " in " + churchillSpeech.year + ".");
 });
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
