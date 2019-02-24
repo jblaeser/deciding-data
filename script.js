@@ -58,17 +58,44 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 
 
   if (churchillSpeech.year > ghandiSpeech.year && churchillSpeech.year > demosthenesSpeech.year) {
-    console.log("This is the most recent speech on the page!")
+    console.log("This is the most recent speech on the page.")
   } else if (churchillSpeech.year < ghandiSpeech.year && churchillSpeech.year < demosthenesSpeech.year) {
-    console.log("This is the oldest speech on the page!")
+    console.log("This is the oldest speech on the page.")
   } else {
-    console.log("This speech is neither the oldest or newest speech on the page. Juuuust right, Goldilocks")};
+    console.log("This speech is neither the oldest or newest speech on the page. Juuuust right, Goldilocks.")};
 });
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Ghandi" button.
+  console.log("This speech was written by " + ghandiSpeech.author + " in " + ghandiSpeech.year + ".");
+
+
+  if (ghandiSpeech.yearIsBCE === true) {
+    console.log("This speech took place before the common era.")
+  } else {console.log("This speech took place during the common era.")};
+
+
+  if (ghandiSpeech.year > churchillSpeech.year && ghandiSpeech.year > demosthenesSpeech.year) {
+    console.log("This is the most recent speech on the page.")
+  } else if (ghandiSpeech.year < churchillSpeech.year && ghandiSpeech.year < demosthenesSpeech.year) {
+    console.log("This is the oldest speech on the page.")
+  } else {
+    console.log("This speech is neither the oldest or newest speech on the page. Juuuust right, Goldilocks.")};
 });
 
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Demosthenes" button.
+  console.log("This speech was written by " + demosthenesSpeech.author + " in " + demosthenesSpeech.year + ".");
+
+  if (demosthenesSpeech.yearIsBCE === true) {
+    console.log("This speech took place before the common era.")
+  } else {console.log("This speech took place during the common era.")};
+
+
+  if (demosthenesSpeech.year > ghandiSpeech.year && demosthenesSpeech.year > churchillSpeech.year) {
+    console.log("This is the most recent speech on the page.")
+  } else if (demosthenesSpeech.year < ghandiSpeech.year && demosthenesSpeech.year < churchillSpeech.year) {
+    console.log("This is the oldest speech on the page.")
+  } else {
+    console.log("This speech is neither the oldest or newest speech on the page. Juuuust right, Goldilocks.")};
 });
